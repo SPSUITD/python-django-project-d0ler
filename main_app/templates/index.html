@@ -1,0 +1,4 @@
+Главная
+{% for chat in chats %}
+  <p><a href="{% url 'chat' chat.pk %}">{{ chat.title }}</a></p>
+{% endfor %}

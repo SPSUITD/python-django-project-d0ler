@@ -1,0 +1,9 @@
+{% for msg in messages %}
+  {{msg.date_time}} {{ msg.author }} -> {{ msg.text }}<br>
+{% endfor %}
+<form method="POST">
+  {% csrf_token %}
+  <input type="text" name="text" placeholder="Ваше сообщение">
+  <button type="submit">Отправить сообщение</button>
+</form>
+<a href="{% url 'index' %}">На главную</a>
